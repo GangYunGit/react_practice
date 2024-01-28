@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!-- VanillaJS가 작동하는 방식 -->
+<html>
+  <!-- 1단계. html로 UI 작성 -->
+  <body>
+    <span>몇 번 눌렀니? 0</span>
+    <button id="btn">클릭</button>
+  </body>
+  <script>
+    // 2단계. DOM API로 조작할 태그를 선택
+    const button = document.getElementById('btn');
+    const span = document.querySelector('span');
+    let counter = 0;
+    // 4단계. 데이터 및 UI 업데이트
+    function handleClick() {
+      console.log('클릭 됨');
+      counter = counter + 1;
+      span.innerText = `몇 번 눌렀니? ${counter}`;
+    }
+    // 3단계. 이벤트 감지
+    button.addEventListener('click', handleClick);
+  </script>
+</html>
