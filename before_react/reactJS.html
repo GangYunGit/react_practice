@@ -6,12 +6,15 @@
   </body>
   <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
   <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
-  <script>
-    // javascript를 이용하여 요소(element)를 생성하고
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
     const root = document.getElementById('root');
-    // ReactJS가 html으로 번역해줌
-    const span = React.createElement('span', { id: 'new-span', style: { color: 'red' } }, '난 span이야');
-    // UI 업데이트
-    ReactDOM.render(span, root);
+    const Container = () => (
+      <div>
+        <h1>Total Clicks : 0</h1>
+        <button>Click</button>
+      </div>
+    );
+    ReactDOM.render(<Container />, root);
   </script>
 </html>
